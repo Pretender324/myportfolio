@@ -56,7 +56,7 @@ export default function Works() {
                                 languages={['HTML&CSS', "React"]}
                                 contentDetailed="自分自身の紹介のために作成したポートフォリオサイトです。Reactの勉強も兼ねて作成いたしました。デザインには主にMaterial-UIを用いています。"
                                 siteLink="https://portfolio-795a2.firebaseapp.com/"
-                                gitHubLink=""
+                                gitHubLink="https://github.com/Pretender324/myportfolio"
                                 />
                             <Product
                                 image="howtoteach.png" 
@@ -65,7 +65,7 @@ export default function Works() {
                                 languages={['HTML&CSS', "Ruby on Rails", "Heroku"]}
                                 contentDetailed="プログラミングスクールで作成したオリジナルプロダクトです。投稿機能・ログイン機能・いいね機能などを実装しています。新米塾講師・家庭教師の参考になるような、先輩講師の経験談が投稿されているサイトです。（詳しくはリンクをクリック！）"
                                 siteLink="https://helpforteachers.herokuapp.com/"
-                                gitHubLink=""
+                                gitHubLink="https://github.com/Pretender324/HOW_TO_TEACH"
                                 />
                         </Grid>
                     </Grid>
