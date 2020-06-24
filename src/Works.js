@@ -67,6 +67,15 @@ export default function Works() {
                                 siteLink="https://helpforteachers.herokuapp.com/"
                                 gitHubLink="https://github.com/Pretender324/HOW_TO_TEACH"
                                 />
+                            <Product
+                                image="howtoteach.png" 
+                                title="Swistory (未デプロイ)"
+                                content="水泳大会の記録を投稿するサイトです。"
+                                languages={['HTML&CSS', "Ruby on Rails", "JavaScript", "jQuery"]}
+                                contentDetailed="独自で作ったプロダクトです。投稿機能・ログイン機能のほか、記録の推移を閲覧できる機能なども実装しています。"
+                                siteLink=""
+                                gitHubLink="https://github.com/Pretender324/swistory"
+                                />
                         </Grid>
                     </Grid>
                 </Box>

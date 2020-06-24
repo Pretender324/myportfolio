@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Typography, Grid, Button, Paper, Modal, Link} from '@material-ui/core';
+import {Typography, Grid, Paper, Modal, Link} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import LanguageTag from './LanguageTag';
 
