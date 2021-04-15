@@ -2,18 +2,16 @@ import { Col, Divider, Row, Typography } from 'antd'
 import Layout, { Content } from 'antd/lib/layout/layout'
 import React from 'react'
 import 'antd/dist/antd.css';
+import { Title } from '../components/Title';
+import { AtCoder } from '../components/AtCoder';
 
 
 export default function Home() {
   return (
     <Layout>
       <Content>
-        <Row justify="center">
-          <Col span={12} style={{ textAlign: "center", padding: "20px 20px 0px" }}>
-            <Typography.Title>Riku Adachi's Portfolio</Typography.Title>
-          </Col>
-        </Row>
-        <Row justify="center">
+        <Title text="Riku Adachi's Portfolio"></Title>
+        <Row justify="center" style={{paddingTop: "20px"}}>
           <Col span={16}>
             <Row justify="space-around">
               <Col span={10}>
@@ -27,6 +25,7 @@ export default function Home() {
                 }}>
                   <Typography>Recent Activity</Typography>
                   <Divider>AtCoder</Divider>
+                  <AtCoder/>
                   <Divider>Twitter</Divider>
                 </div>
               </Col>

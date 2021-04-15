@@ -6,11 +6,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout
       style={{ height: "100vh" }}>
-      <CommonHeader/>
+      <CommonHeader />
       <Component {...pageProps} />
     </Layout>
   )
-    
+
 }
 
 export default MyApp

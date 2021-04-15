@@ -7,7 +7,7 @@ export function CommonHeader() {
         <Header className="">
             <Menu theme="dark" mode="horizontal">
                 <Menu.Item key="1"><Link href="/">Home</Link></Menu.Item>
-                <Menu.Item key="2"><Link href="#">About Me</Link></Menu.Item>
+                <Menu.Item key="2"><Link href="/about-me">About Me</Link></Menu.Item>
                 <Menu.Item key="3"><Link href="#">Skill Set</Link></Menu.Item>
             </Menu>
         </Header>
