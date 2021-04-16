@@ -14,7 +14,7 @@ export default function AboutMe() {
                             textAlign: "center",
                             backgroundColor: "lightgray",
                             padding: "20px",
-                            height: "70vh",
+                            minHeight: "70vh",
                             width: "100%",
                             borderRadius: "10px"
                         }}>
