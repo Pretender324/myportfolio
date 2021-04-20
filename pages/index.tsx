@@ -3,7 +3,7 @@ import Layout, { Content } from 'antd/lib/layout/layout'
 import React from 'react'
 import 'antd/dist/antd.css';
 import { Title } from '../components/Title';
-import { AtCoder } from '../components/AtCoder';
+import AtCoder from '../components/AtCoder';
 
 
 export default function Home() {
@@ -23,9 +23,9 @@ export default function Home() {
                   width: "100%",
                   borderRadius: "10px"
                 }}>
-                  <Typography>Recent Activity</Typography>
+                  <Typography.Title level={3}>Recent Activity</Typography.Title>
                   <Divider>AtCoder</Divider>
-                  <AtCoder/>
+                  <AtCoder />
                   <Divider>Twitter</Divider>
                 </div>
               </Col>
@@ -40,7 +40,7 @@ export default function Home() {
                       width: "100%",
                       borderRadius: "10px"
                     }}>
-                      <Typography>更新履歴</Typography>
+                      <Typography.Title level={3}>更新履歴</Typography.Title>
                     </div>
                     
                   </Col>
@@ -57,7 +57,7 @@ export default function Home() {
                       width: "100%",
                       borderRadius: "10px"
                     }}>
-                      <Typography>Contact</Typography>
+                      <Typography.Title level={3}>Contact</Typography.Title>
                     </div>
                   </Col>
                 </Row>
