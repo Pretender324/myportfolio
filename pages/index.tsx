@@ -7,6 +7,7 @@ import AtCoder from "../components/AtCoder"
 
 
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function Home() {
 	return (
 		<Layout>
