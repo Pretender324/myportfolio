@@ -5,7 +5,7 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   return (
     <Layout
-      style={{ height: "100vh" }}>
+      style={{ minHeight: "100vh" }}>
       <CommonHeader />
       <Component {...pageProps} />
     </Layout>

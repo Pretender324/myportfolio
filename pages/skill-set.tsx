@@ -30,6 +30,10 @@ export default function SkillSet() {
       title: "Level",
       dataIndex: "level",
     },
+    {
+      title: "Description",
+      dataIndex: "description"
+    }
   ];
   const frontData = [
     {
@@ -39,14 +43,17 @@ export default function SkillSet() {
     {
       name: "React",
       level: "★★",
+      description: "インターンで使用",
     },
     {
       name: "Next.js",
       level: "★★",
+      description: "インターンで使用",
     },
     {
       name: "TypeScript",
       level: "★★",
+      description: "インターンで使用",
     },
     {
       name: "JavaScript",
@@ -61,6 +68,7 @@ export default function SkillSet() {
     {
       name: "Python",
       level: "★★★",
+      description: "競プロ・機械学習で使用"
     },
     {
       name: "Django",
