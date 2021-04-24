@@ -30,9 +30,8 @@ function AtCoderColor({ rate }: { rate:number}) {
 }
 
 function AtCoderPlot({ history }: { history: AtCoderHistory[] }) {
-	const LatestFiveContest: AtCoderHistory[] = history.slice(-10,)
 	const data = []
-	LatestFiveContest.map((c) => {
+	history.map((c) => {
 		const d = {
 			name: c.ContestName,
 			rating: c.NewRating,
@@ -52,7 +51,7 @@ function AtCoderPlot({ history }: { history: AtCoderHistory[] }) {
 			<CartesianGrid strokeDasharray="3 3" />
 			<Tooltip />
 			<XAxis hide dataKey="name" />
-			<YAxis domain={[1000,1400]}/>
+			<YAxis />
 			<Line type="monotone" dataKey="rating" stroke="#8884d8" activeDot={{ r: 8 }} />
 		</LineChart>
 	)
