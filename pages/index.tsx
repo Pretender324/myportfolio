@@ -4,6 +4,7 @@ import React from "react"
 import "antd/dist/antd.css"
 import { Title } from "../components/Title"
 import AtCoder from "../components/AtCoder"
+import { Timeline } from "react-twitter-widgets"
 
 
 
@@ -33,8 +34,17 @@ export default function Home() {
 								</Col>
 								<Col span={10}>
 									<Divider>Twitter</Divider>
-									<a className="twitter-timeline" data-width="400" data-height="400" href="https://twitter.com/Pretend16474300?ref_src=twsrc%5Etfw">Tweets by Pretend16474300</a>
-									<script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+									<Timeline
+										dataSource={{
+											sourceType: "profile",
+											screenName: "Pretend16474300",
+										}}
+										options={{
+											width: "300",
+											height: "400",
+											theme: "dark",
+										}}
+									/>
 								</Col>
 							</Row>
 						</div>
