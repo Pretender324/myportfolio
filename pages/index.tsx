@@ -63,6 +63,8 @@ export default function Home() {
 									borderRadius: "10px"
 								}}>
 									<Typography.Title level={3}>更新履歴</Typography.Title>
+									<Divider>v2.0</Divider>
+									<Typography.Text>Next.jsにリプレイス (2021/04/24)</Typography.Text>
 								</div>
 							</Col>
 							<Col span={11} style={{ textAlign: "center"}}>
