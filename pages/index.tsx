@@ -76,7 +76,8 @@ export default function Home() {
 									width: "100%",
 									borderRadius: "10px"
 								}}>
-									<Typography.Title level={3}>Contact</Typography.Title>
+                  <Typography.Title level={3}>Contact</Typography.Title>
+                  <Typography.Text>準備中</Typography.Text>
 								</div>
 							</Col>
 						</Row>
