@@ -1,4 +1,4 @@
 export type Language = {
-    name: string
-    color: string
-}
+  name: string;
+  color: string;
+};
