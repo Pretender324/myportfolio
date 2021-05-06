@@ -9,6 +9,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -47,18 +48,20 @@ function AtCoderPlot({ history }: { history: AtCoderHistory[] }) {
   });
 
   return (
-    <LineChart width={400} height={300} data={data}>
-      <CartesianGrid strokeDasharray="3 3" />
-      <Tooltip />
-      <XAxis hide dataKey="name" />
-      <YAxis />
-      <Line
-        type="monotone"
-        dataKey="rating"
-        stroke="#8884d8"
-        activeDot={{ r: 8 }}
-      />
-    </LineChart>
+    <ResponsiveContainer width="100%" height={300}>
+      <LineChart data={data}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <Tooltip />
+        <XAxis hide dataKey="name" />
+        <YAxis />
+        <Line
+          type="monotone"
+          dataKey="rating"
+          stroke="#8884d8"
+          activeDot={{ r: 8 }}
+        />
+      </LineChart>
+    </ResponsiveContainer>
   );
 }
 
@@ -68,7 +71,6 @@ export default function AtCoder() {
   if (error) return <Typography.Text>An error has occurred.</Typography.Text>;
   if (!data) return <Typography.Text>Loading...</Typography.Text>;
   if (data != null) {
-    console.log(data);
     const newestContestData: AtCoderHistory = data.slice(-1)[0];
     return (
       <>

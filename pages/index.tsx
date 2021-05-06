@@ -19,7 +19,7 @@ export default function Home() {
                 textAlign: "center",
                 backgroundColor: "lightgray",
                 padding: "20px",
-                height: "70vh",
+                minHeight: "70vh",
                 width: "100%",
                 borderRadius: "10px",
               }}
@@ -28,11 +28,11 @@ export default function Home() {
                 <Typography.Title level={3}>Recent Activity</Typography.Title>
               </Row>
               <Row justify="space-around">
-                <Col span={10}>
+                <Col xs={24} md={10}>
                   <Divider>AtCoder</Divider>
                   <AtCoder />
                 </Col>
-                <Col span={10}>
+                <Col xs={24} md={10}>
                   <Divider>Twitter</Divider>
                   <Timeline
                     dataSource={{
@@ -52,11 +52,15 @@ export default function Home() {
         </Row>
         <Row
           justify="center"
-          style={{ marginTop: "20px", marginBottom: "40px" }}
+          style={{ marginTop: "40px", marginBottom: "40px" }}
         >
           <Col span={20}>
             <Row justify="space-between">
-              <Col span={11} style={{ textAlign: "center" }}>
+              <Col
+                xs={24}
+                md={11}
+                style={{ textAlign: "center", marginBottom: "40px" }}
+              >
                 <div
                   style={{
                     textAlign: "center",
@@ -74,7 +78,7 @@ export default function Home() {
                   </Typography.Text>
                 </div>
               </Col>
-              <Col span={11} style={{ textAlign: "center" }}>
+              <Col xs={24} md={11} style={{ textAlign: "center" }}>
                 <div
                   style={{
                     textAlign: "center",
