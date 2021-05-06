@@ -1,5 +1,6 @@
 import { Card, Col, Empty, Layout, Row, Tag, Typography } from "antd";
 import { Content } from "antd/lib/layout/layout";
+import { ReactChild } from "react";
 import { Title } from "../components/Title";
 import { Language } from "../entities/works";
 
@@ -13,6 +14,14 @@ function LanguageTags({ languages }: { languages: Language[] }) {
   );
 }
 
+function WorkContent({ children }: { children: ReactChild }) {
+  return (
+    <Col xs={24} md={16} lg={14} xl={6} style={{ marginBottom: "40px" }}>
+      {children}
+    </Col>
+  );
+}
+
 export default function Works() {
   const { Meta } = Card;
 
@@ -23,9 +32,8 @@ export default function Works() {
         <Typography.Paragraph style={{ textAlign: "center" }}>
           私がこれまで作ってきた作品を紹介します。
         </Typography.Paragraph>
-        <Row justify="space-between">
-          <Col span={2} />
-          <Col span={6}>
+        <Row justify="space-around">
+          <WorkContent>
             <Card
               hoverable
               cover={
@@ -58,11 +66,18 @@ export default function Works() {
                 ]}
               ></LanguageTags>
             </Card>
-          </Col>
-          <Col span={6}>
+          </WorkContent>
+          <WorkContent>
             <Card
               hoverable
-              cover={<Empty style={{ height: "160px", marginTop: "40px" }} />}
+              cover={
+                <Empty
+                  style={{
+                    margin: "0",
+                  }}
+                  imageStyle={{ height: "170px", lineHeight: "170px" }}
+                />
+              }
               style={{ height: "360px" }}
             >
               <Meta
@@ -86,11 +101,18 @@ export default function Works() {
                 ]}
               ></LanguageTags>
             </Card>
-          </Col>
-          <Col span={6}>
+          </WorkContent>
+          <WorkContent>
             <Card
               hoverable
-              cover={<Empty style={{ height: "160px", marginTop: "40px" }} />}
+              cover={
+                <Empty
+                  style={{
+                    margin: "0",
+                  }}
+                  imageStyle={{ height: "170px", lineHeight: "170px" }}
+                />
+              }
               style={{ height: "360px" }}
             >
               <Meta
@@ -99,8 +121,7 @@ export default function Works() {
               />
               <LanguageTags languages={[]}></LanguageTags>
             </Card>
-          </Col>
-          <Col span={2} />
+          </WorkContent>
         </Row>
       </Content>
     </Layout>
