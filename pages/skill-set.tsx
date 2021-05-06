@@ -6,18 +6,26 @@ import React from "react";
 
 function Skills({ children }: { children: ReactChild }) {
   return (
-    <div
+    <Col
+      xs={22}
+      xl={7}
       style={{
-        textAlign: "center",
-        backgroundColor: "lightgray",
-        padding: "20px",
-        height: "60vh",
-        width: "100%",
-        borderRadius: "10px",
+        marginBottom: "40px",
       }}
     >
-      {children}
-    </div>
+      <div
+        style={{
+          textAlign: "center",
+          backgroundColor: "lightgray",
+          padding: "20px",
+          height: "60vh",
+          width: "100%",
+          borderRadius: "10px",
+        }}
+      >
+        {children}
+      </div>
+    </Col>
   );
 }
 
@@ -111,45 +119,41 @@ export default function SkillSet() {
           ★★★: リファレンスなしでも利用可
         </Typography.Paragraph>
         <Row justify="space-around">
-          <Col span={7}>
-            <Skills>
-              <div>
-                <Typography.Title>Front End</Typography.Title>
-                <Table
-                  columns={columns}
-                  dataSource={frontData}
-                  pagination={false}
-                  scroll={{ y: 240 }}
-                ></Table>
-              </div>
-            </Skills>
-          </Col>
-          <Col span={7}>
-            <Skills>
-              <div>
-                <Typography.Title>Back End</Typography.Title>
-                <Table
-                  columns={columns}
-                  dataSource={backData}
-                  pagination={false}
-                  scroll={{ y: 240 }}
-                ></Table>
-              </div>
-            </Skills>
-          </Col>
-          <Col span={7}>
-            <Skills>
-              <div>
-                <Typography.Title>Others</Typography.Title>
-                <Table
-                  columns={columns}
-                  dataSource={othersData}
-                  pagination={false}
-                  scroll={{ y: 240 }}
-                ></Table>
-              </div>
-            </Skills>
-          </Col>
+          <Skills>
+            <div>
+              <Typography.Title>Front End</Typography.Title>
+              <Table
+                columns={columns}
+                dataSource={frontData}
+                pagination={false}
+                scroll={{ y: 240 }}
+              ></Table>
+            </div>
+          </Skills>
+
+          <Skills>
+            <div>
+              <Typography.Title>Back End</Typography.Title>
+              <Table
+                columns={columns}
+                dataSource={backData}
+                pagination={false}
+                scroll={{ y: 240 }}
+              ></Table>
+            </div>
+          </Skills>
+
+          <Skills>
+            <div>
+              <Typography.Title>Others</Typography.Title>
+              <Table
+                columns={columns}
+                dataSource={othersData}
+                pagination={false}
+                scroll={{ y: 240 }}
+              ></Table>
+            </div>
+          </Skills>
         </Row>
       </Content>
     </Layout>

@@ -9,12 +9,13 @@ export default function AboutMe() {
       <Content>
         <Title text="About Me"></Title>
         <Row justify="center">
-          <Col span={12}>
+          <Col xs={22} lg={16}>
             <div
               style={{
                 textAlign: "center",
                 backgroundColor: "lightgray",
                 padding: "20px",
+                marginBottom: "40px",
                 minHeight: "70vh",
                 width: "100%",
                 borderRadius: "10px",
