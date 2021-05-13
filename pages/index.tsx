@@ -74,11 +74,15 @@ export default function Home() {
                     md={11}
                     style={{ textAlign: "center", marginBottom: "40px" }}
                   >
-                    <MyCell minHeight="20vh">
+                    <MyCell minHeight="30vh">
                       <>
                         <Typography.Title level={3}>
                           Change Log
                         </Typography.Title>
+                        <Divider>v2.1</Divider>
+                        <Typography.Text>
+                          レスポンシブ対応など (2021/05/13)
+                        </Typography.Text>
                         <Divider>v2.0</Divider>
                         <Typography.Text>
                           Next.jsにリプレイス (2021/04/24)
@@ -87,7 +91,7 @@ export default function Home() {
                     </MyCell>
                   </Col>
                   <Col xs={24} md={11} style={{ textAlign: "center" }}>
-                    <MyCell minHeight="20vh">
+                    <MyCell minHeight="30vh">
                       <Typography.Title level={3}>Contact</Typography.Title>
                     </MyCell>
                   </Col>
