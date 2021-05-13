@@ -4,6 +4,7 @@ import { ReactChild } from "react";
 import { Title } from "../components/Title";
 import React from "react";
 import { MyCell } from "../components/MyCell";
+import { motion } from "framer-motion";
 
 function Skills({ children }: { children: ReactChild }) {
   return (
@@ -98,54 +99,61 @@ export default function SkillSet() {
     },
   ];
   return (
-    <Layout>
-      <Content>
-        <Title text="Skill Set"></Title>
-        <Typography.Paragraph style={{ textAlign: "center" }}>
-          ★: 触ったことがある程度
-          <br></br>
-          ★★: リファレンスを見ながら利用可
-          <br></br>
-          ★★★: リファレンスなしでも利用可
-        </Typography.Paragraph>
-        <Row justify="space-around">
-          <Skills>
-            <div>
-              <Typography.Title>Front End</Typography.Title>
-              <Table
-                columns={columns}
-                dataSource={frontData}
-                pagination={false}
-                scroll={{ y: 240 }}
-              ></Table>
-            </div>
-          </Skills>
+    <motion.div
+      initial={{ y: "100vh" }}
+      animate={{ y: 0 }}
+      transition={{ ease: "easeOut", duration: 1 }}
+      exit={{ y: "100vh" }}
+    >
+      <Layout>
+        <Content>
+          <Title text="Skill Set"></Title>
+          <Typography.Paragraph style={{ textAlign: "center" }}>
+            ★: 触ったことがある程度
+            <br></br>
+            ★★: リファレンスを見ながら利用可
+            <br></br>
+            ★★★: リファレンスなしでも利用可
+          </Typography.Paragraph>
+          <Row justify="space-around">
+            <Skills>
+              <div>
+                <Typography.Title>Front End</Typography.Title>
+                <Table
+                  columns={columns}
+                  dataSource={frontData}
+                  pagination={false}
+                  scroll={{ y: 240 }}
+                ></Table>
+              </div>
+            </Skills>
 
-          <Skills>
-            <div>
-              <Typography.Title>Back End</Typography.Title>
-              <Table
-                columns={columns}
-                dataSource={backData}
-                pagination={false}
-                scroll={{ y: 240 }}
-              ></Table>
-            </div>
-          </Skills>
+            <Skills>
+              <div>
+                <Typography.Title>Back End</Typography.Title>
+                <Table
+                  columns={columns}
+                  dataSource={backData}
+                  pagination={false}
+                  scroll={{ y: 240 }}
+                ></Table>
+              </div>
+            </Skills>
 
-          <Skills>
-            <div>
-              <Typography.Title>Others</Typography.Title>
-              <Table
-                columns={columns}
-                dataSource={othersData}
-                pagination={false}
-                scroll={{ y: 240 }}
-              ></Table>
-            </div>
-          </Skills>
-        </Row>
-      </Content>
-    </Layout>
+            <Skills>
+              <div>
+                <Typography.Title>Others</Typography.Title>
+                <Table
+                  columns={columns}
+                  dataSource={othersData}
+                  pagination={false}
+                  scroll={{ y: 240 }}
+                ></Table>
+              </div>
+            </Skills>
+          </Row>
+        </Content>
+      </Layout>
+    </motion.div>
   );
 }

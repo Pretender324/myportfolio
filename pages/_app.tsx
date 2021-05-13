@@ -4,10 +4,10 @@ import "../styles/globals.css";
 import Head from "next/head";
 import React from "react";
 import type { AppProps } from "next/app";
-import { Content } from "antd/lib/layout/layout";
+import { AnimatePresence } from "framer-motion";
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <div>
       <Head>
@@ -19,7 +19,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       >
         <CommonHeader />
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter initial={true}>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
       </Layout>
     </div>
   );
