@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 
 html,
 body {
@@ -15,4 +15,28 @@ a {
 
 * {
   box-sizing: border-box;
+  color: black;
+}
+
+.ant-typography {
+  color: black;
+}
+h1.ant-typography {
+  color: black;
+}
+
+h3.ant-typography {
+  color: black;
+}
+
+.ant-layout {
+  background-color: #c5b8ae;
+}
+
+.ant-layout-header {
+  background-color: #421a16;
+}
+
+.ant-menu.ant-menu-dark {
+  background-color: #421a16;
 }
