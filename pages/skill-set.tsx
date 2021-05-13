@@ -3,6 +3,7 @@ import { Content } from "antd/lib/layout/layout";
 import { ReactChild } from "react";
 import { Title } from "../components/Title";
 import React from "react";
+import { MyCell } from "../components/MyCell";
 
 function Skills({ children }: { children: ReactChild }) {
   return (
@@ -13,18 +14,7 @@ function Skills({ children }: { children: ReactChild }) {
         marginBottom: "40px",
       }}
     >
-      <div
-        style={{
-          textAlign: "center",
-          backgroundColor: "lightgray",
-          padding: "20px",
-          height: "60vh",
-          width: "100%",
-          borderRadius: "10px",
-        }}
-      >
-        {children}
-      </div>
+      <MyCell minHeight="60vh">{children}</MyCell>
     </Col>
   );
 }
