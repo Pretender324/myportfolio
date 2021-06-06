@@ -100,10 +100,10 @@ export default function SkillSet() {
   ];
   return (
     <motion.div
-      initial={{ y: "100vh" }}
-      animate={{ y: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 1 }}
-      exit={{ y: "100vh" }}
+      exit={{ opacity: 0 }}
     >
       <Layout>
         <Content>

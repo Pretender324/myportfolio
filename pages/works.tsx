@@ -28,10 +28,10 @@ export default function Works() {
 
   return (
     <motion.div
-      initial={{ x: "-100vw" }}
-      animate={{ x: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ ease: "backOut", duration: 1 }}
-      exit={{ x: "-100vw" }}
+      exit={{ opacity: 0 }}
     >
       <Layout>
         <Content>
