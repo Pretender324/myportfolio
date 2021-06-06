@@ -1,4 +1,4 @@
-import { Col, Divider, Row, Typography } from "antd";
+import { Col, Divider, List, Row, Typography } from "antd";
 import Layout, { Content } from "antd/lib/layout/layout";
 import React from "react";
 import { Title } from "../components/Title";
@@ -92,7 +92,35 @@ export default function Home() {
                   </Col>
                   <Col xs={24} md={11} style={{ textAlign: "center" }}>
                     <MyCell minHeight="30vh">
-                      <Typography.Title level={3}>Contact</Typography.Title>
+                      <div>
+                        <Typography.Title level={3}>Links</Typography.Title>
+                        <List>
+                          <List.Item>
+                            GitHub:{" "}
+                            <a href="https://github.com/Pretender324">
+                              https://github.com/Pretender324
+                            </a>
+                          </List.Item>
+                          <List.Item>
+                            AtCoder:{" "}
+                            <a href="https://atcoder.jp/users/Pretender">
+                              https://atcoder.jp/users/Pretender
+                            </a>
+                          </List.Item>
+                          <List.Item>
+                            Qiita:{" "}
+                            <a href="https://qiita.com/Pretend16474300">
+                              https://qiita.com/Pretend16474300
+                            </a>
+                          </List.Item>
+                          <List.Item>
+                            Wantedly:{" "}
+                            <a href="https://www.wantedly.com/users/136238533">
+                              https://www.wantedly.com/users/136238533
+                            </a>
+                          </List.Item>
+                        </List>
+                      </div>
                     </MyCell>
                   </Col>
                 </Row>
