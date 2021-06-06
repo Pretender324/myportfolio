@@ -72,10 +72,15 @@ export default function AtCoder() {
   if (!data) return <Typography.Text>Loading...</Typography.Text>;
   if (data != null) {
     const newestContestData: AtCoderHistory = data.slice(-1)[0];
+    const highestData: AtCoderHistory = data.reduce(
+      (a: AtCoderHistory, b: AtCoderHistory) =>
+        a.NewRating > b.NewRating ? a : b
+    );
+
     return (
       <>
         <Typography.Paragraph>
-          Highest: <AtCoderColor rate={1249} />
+          Highest: <AtCoderColor rate={highestData.NewRating} />
         </Typography.Paragraph>
         <Typography.Paragraph>
           最新のコンテスト: {newestContestData.ContestName}

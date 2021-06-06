@@ -4,7 +4,7 @@ async function getAtcoderHistory(req: NextApiRequest, res: NextApiResponse) {
   const url = "https://atcoder.jp/users/Pretender/history/json";
   try {
     const result = await fetch(url);
-    const json = await result.json()
+    const json = await result.json();
     res.status(200).json(json);
   } catch {
     res.status(404);
