@@ -78,11 +78,10 @@ export default function Works() {
               <Card
                 hoverable
                 cover={
-                  <Empty
-                    style={{
-                      margin: "0",
-                    }}
-                    imageStyle={{ height: "170px", lineHeight: "170px" }}
+                  <img
+                    alt="example"
+                    src="myportfolio.png"
+                    style={{ height: "200px" }}
                   />
                 }
                 style={{ height: "360px" }}
@@ -123,10 +122,37 @@ export default function Works() {
                 style={{ height: "360px" }}
               >
                 <Meta
-                  title="Swistory(製作中)"
-                  description="水泳の練習メニューを記録するアプリです。"
+                  title="Nishoku-shita(非公開)"
+                  description="部活の出席管理アプリです。"
                 />
-                <LanguageTags languages={[]}></LanguageTags>
+                <LanguageTags
+                  languages={[
+                    {
+                      name: "TypeScript",
+                      color: "blue",
+                    },
+                    {
+                      name: "Next.js",
+                      color: "purple",
+                    },
+                    {
+                      name: "Node.js",
+                      color: "yellow",
+                    },
+                    {
+                      name: "GraphQL",
+                      color: "pink",
+                    },
+                    {
+                      name: "MySQL",
+                      color: "blue",
+                    },
+                    {
+                      name: "AWS",
+                      color: "orange",
+                    },
+                  ]}
+                ></LanguageTags>
               </Card>
             </WorkContent>
           </Row>
