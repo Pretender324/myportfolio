@@ -15,28 +15,28 @@ a {
 
 * {
   box-sizing: border-box;
-  color: black;
+  color: #285076;
 }
 
 .ant-typography {
-  color: black;
+  color: #285076;
 }
 h1.ant-typography {
-  color: black;
+  color: #285076;
 }
 
 h3.ant-typography {
-  color: black;
+  color: #285076;
 }
 
 .ant-layout {
-  background-color: #c5b8ae;
+  background-color: #ebf3f6;
 }
 
 .ant-layout-header {
-  background-color: #421a16;
+  background-color: #569dc7;
 }
 
 .ant-menu.ant-menu-dark {
-  background-color: #421a16;
+  background-color: #569dc7;
 }
